@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | CampusBite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">CampusBite</a>
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Cart</a>
+                <a href="orders.html">My Orders</a>
+            </nav>
+            <a href="login.html" class="navbar-btn">Login</a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1 class="page-title">Today's Menu</h1>
+            <p class="page-subtitle">Fresh items updated daily — check availability before you order</p>
+        </div>
+    </section>
+
+    <!-- MENU FILTER + GRID -->
+    <section class="menu-page">
+        <div class="section-container">
+
+            <div class="menu-filter">
+                <button class="filter-btn active" onclick="filterMenu('all', this)">All</button>
+                <button class="filter-btn" onclick="filterMenu('rice', this)">Rice Items</button>
+                <button class="filter-btn" onclick="filterMenu('snacks', this)">Snacks</button>
+                <button class="filter-btn" onclick="filterMenu('drinks', this)">Drinks</button>
+                <button class="filter-btn" onclick="filterMenu('desserts', this)">Desserts</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+
+                <div class="menu-card" data-category="rice">
+                    <img src="images/placeholder-food.jpg" alt="Chicken Biryani">
+                    <div class="menu-card-info">
+                        <h3>Chicken Biryani</h3>
+                        <p class="menu-desc">Fragrant rice with tender chicken and spices</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳120</span>
+                            <span class="menu-status available">Available</span>
+                        </div>
+                        <button class="add-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="rice">
+                    <img src="images/placeholder-food.jpg" alt="Beef Tehari">
+                    <div class="menu-card-info">
+                        <h3>Beef Tehari</h3>
+                        <p class="menu-desc">Classic tehari with slow-cooked beef</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳150</span>
+                            <span class="menu-status available">Available</span>
+                        </div>
+                        <button class="add-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="rice">
+                    <img src="images/placeholder-food.jpg" alt="Vegetable Khichuri">
+                    <div class="menu-card-info">
+                        <h3>Vegetable Khichuri</h3>
+                        <p class="menu-desc">Comfort khichuri with mixed vegetables</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳80</span>
+                            <span class="menu-status sold-out">Sold Out</span>
+                        </div>
+                        <button class="add-cart-btn" disabled>Sold Out</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="snacks">
+                    <img src="images/placeholder-food.jpg" alt="Chicken Samosa">
+                    <div class="menu-card-info">
+                        <h3>Chicken Samosa</h3>
+                        <p class="menu-desc">Crispy samosa with spiced chicken filling</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳30</span>
+                            <span class="menu-status available">Available</span>
+                        </div>
+                        <button class="add-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="snacks">
+                    <img src="images/placeholder-food.jpg" alt="Vegetable Roll">
+                    <div class="menu-card-info">
+                        <h3>Vegetable Roll</h3>
+                        <p class="menu-desc">Fried roll stuffed with mixed veggies</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳25</span>
+                            <span class="menu-status available">Available</span>
+                        </div>
+                        <button class="add-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="drinks">
+                    <img src="images/placeholder-food.jpg" alt="Lemon Juice">
+                    <div class="menu-card-info">
+                        <h3>Lemon Juice</h3>
+                        <p class="menu-desc">Fresh-squeezed, cold and tangy</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳40</span>
+                            <span class="menu-status available">Available</span>
+                        </div>
+                        <button class="add-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="drinks">
+                    <img src="images/placeholder-food.jpg" alt="Borhani">
+                    <div class="menu-card-info">
+                        <h3>Borhani</h3>
+                        <p class="menu-desc">Spiced yogurt drink, chilled</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳35</span>
+                            <span class="menu-status sold-out">Sold Out</span>
+                        </div>
+                        <button class="add-cart-btn" disabled>Sold Out</button>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <img src="images/placeholder-food.jpg" alt="Roshogolla">
+                    <div class="menu-card-info">
+                        <h3>Roshogolla</h3>
+                        <p class="menu-desc">Soft, syrupy cottage cheese balls</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-price">৳50</span>
+                            <span class="menu-status available">Available</span>
+                        </div>
+                        <button class="add-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3 class="footer-logo">CampusBite</h3>
+                <p class="footer-tagline">Canteen ordering made simple for SMUCT students.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="orders.html">My Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>SMUCT Campus, Uttara, Dhaka</p>
+                <p>canteen@smuct.ac.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampusBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* ============================
+   ADMIN DASHBOARD STYLES (admin.html)
+   ============================ */
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

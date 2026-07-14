@@ -1,0 +1,163 @@
+/* ============================
+   HOME PAGE STYLES (index.html)
+   ============================ */
+
+.hero {
+    padding: 100px 24px;
+    background-color: #fff7ed;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.hero-subtitle {
+    font-size: 17px;
+    color: #475569;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #ea580c;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #c2410c;
+}
+
+/* MENU HIGHLIGHTS */
+
+.menu-highlights {
+    padding: 80px 24px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.highlight-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.highlight-info {
+    padding: 16px;
+}
+
+.highlight-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.highlight-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ea580c;
+    margin-bottom: 8px;
+}
+
+.highlight-status {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.highlight-status.available {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.highlight-status.sold-out {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* HOW IT WORKS */
+
+.how-it-works {
+    padding: 80px 24px;
+    background-color: #f8fafc;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 20px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 24px;
+}
+
+.step-number {
+    width: 44px;
+    height: 44px;
+    background-color: #ea580c;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 16px;
+}
+
+.step-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}

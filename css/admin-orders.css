@@ -1,0 +1,59 @@
+/* ============================
+   ADMIN ORDERS STYLES (admin_orders.html)
+   ============================ */
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.panel-header h2 {
+    margin-bottom: 0;
+}
+
+.order-filter {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: #ea580c;
+    color: #ea580c;
+}
+
+.filter-btn.active {
+    background-color: #ea580c;
+    border-color: #ea580c;
+    color: #ffffff;
+}
+
+.status-select {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    cursor: pointer;
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: #ea580c;
+}

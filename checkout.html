@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | CampusBite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">CampusBite</a>
+            <nav class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="cart.html">Cart</a>
+                <a href="orders.html">My Orders</a>
+            </nav>
+            <a href="login.html" class="navbar-btn">Login</a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="section-container">
+            <h1 class="page-title">Checkout</h1>
+            <p class="page-subtitle">Confirm your details and place your order</p>
+        </div>
+    </section>
+
+    <!-- CHECKOUT CONTENT -->
+    <section class="checkout-page">
+        <div class="section-container checkout-layout">
+
+            <!-- LEFT: DETAILS FORM -->
+            <div class="checkout-form">
+
+                <div class="form-block">
+                    <h3>Pickup Details</h3>
+                    <label for="student-name">Full Name</label>
+                    <input type="text" id="student-name" placeholder="e.g. Rafiul Islam">
+
+                    <label for="student-id">Student ID</label>
+                    <input type="text" id="student-id" placeholder="e.g. SMUCT-2023-0142">
+
+                    <label for="pickup-time">Preferred Pickup Time</label>
+                    <select id="pickup-time">
+                        <option>As soon as possible</option>
+                        <option>12:30 PM</option>
+                        <option>1:00 PM</option>
+                        <option>1:30 PM</option>
+                        <option>2:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-block">
+                    <h3>Payment Method</h3>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" checked>
+                        <span>Cash on Pickup</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment">
+                        <span>bKash</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment">
+                        <span>Nagad</span>
+                    </label>
+                </div>
+
+                <div class="form-block">
+                    <h3>Notes (optional)</h3>
+                    <textarea placeholder="Any special request? e.g. less spicy"></textarea>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: ORDER SUMMARY -->
+            <div class="checkout-summary">
+                <h3>Order Summary</h3>
+
+                <div class="checkout-item">
+                    <span>Chicken Biryani x2</span>
+                    <span>৳240</span>
+                </div>
+                <div class="checkout-item">
+                    <span>Chicken Samosa x3</span>
+                    <span>৳90</span>
+                </div>
+                <div class="checkout-item">
+                    <span>Lemon Juice x1</span>
+                    <span>৳40</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>৳370</span>
+                </div>
+                <div class="summary-row">
+                    <span>Service Charge</span>
+                    <span>৳10</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span>৳380</span>
+                </div>
+
+                <button class="place-order-btn">Place Order</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3 class="footer-logo">CampusBite</h3>
+                <p class="footer-tagline">Canteen ordering made simple for SMUCT students.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="orders.html">My Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>SMUCT Campus, Uttara, Dhaka</p>
+                <p>canteen@smuct.ac.bd</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CampusBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

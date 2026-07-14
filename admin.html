@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CampusBite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">CampusBite <span>Admin</span></div>
+            <nav class="admin-nav">
+                <a href="admin.html" class="admin-nav-link active">Dashboard</a>
+                <a href="admin_items.html" class="admin-nav-link">Menu Items</a>
+                <a href="admin_categories.html" class="admin-nav-link">Categories</a>
+                <a href="admin_orders.html" class="admin-nav-link">Orders</a>
+            </nav>
+            <a href="login.html" class="admin-logout">Log Out</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="admin-main">
+
+            <!-- TOPBAR -->
+            <header class="admin-topbar">
+                <h1>Dashboard</h1>
+                <div class="admin-user">Hello, Canteen Staff</div>
+            </header>
+
+            <!-- CONTENT -->
+            <main class="admin-content">
+
+                <!-- STAT CARDS -->
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <p class="stat-label">Today's Orders</p>
+                        <p class="stat-value">24</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-label">Pending Orders</p>
+                        <p class="stat-value">5</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-label">Menu Items</p>
+                        <p class="stat-value">18</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-label">Sold Out Items</p>
+                        <p class="stat-value">2</p>
+                    </div>
+                </div>
+
+                <!-- RECENT ORDERS TABLE -->
+                <div class="admin-panel">
+                    <h2>Recent Orders</h2>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Student</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#CB1042</td>
+                                <td>Rafiul Islam</td>
+                                <td>Chicken Biryani x2, Samosa x3</td>
+                                <td>৳380</td>
+                                <td><span class="status-badge preparing">Preparing</span></td>
+                            </tr>
+                            <tr>
+                                <td>#CB1041</td>
+                                <td>Tasnim Ahmed</td>
+                                <td>Beef Tehari x1</td>
+                                <td>৳150</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#CB1040</td>
+                                <td>Nusrat Jahan</td>
+                                <td>Lemon Juice x2, Roshogolla x1</td>
+                                <td>৳130</td>
+                                <td><span class="status-badge ready">Ready</span></td>
+                            </tr>
+                            <tr>
+                                <td>#CB1039</td>
+                                <td>Shakil Ahmed</td>
+                                <td>Vegetable Khichuri x1</td>
+                                <td>৳80</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
