@@ -1,5 +1,5 @@
 /* ============================
-   MENU PAGE STYLES (menu.html)
+   MENU PAGE STYLES
    ============================ */
 
 .page-header {
@@ -24,34 +24,17 @@
     padding: 50px 24px 80px;
 }
 
-.menu-filter {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+.menu-category-section {
+    margin-bottom: 48px;
 }
 
-.filter-btn {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 1px solid #e2e8f0;
-    background-color: #ffffff;
-    color: #475569;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.filter-btn:hover {
-    border-color: #ea580c;
-    color: #ea580c;
-}
-
-.filter-btn.active {
-    background-color: #ea580c;
-    border-color: #ea580c;
-    color: #ffffff;
+.menu-category-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
 }
 
 .menu-grid {
@@ -66,6 +49,8 @@
     overflow: hidden;
     background-color: #ffffff;
     transition: box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-card:hover {
@@ -76,10 +61,14 @@
     width: 100%;
     height: 160px;
     object-fit: cover;
+    display: block;
 }
 
 .menu-card-info {
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .menu-card-info h3 {
@@ -138,6 +127,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    margin-top: auto;
 }
 
 .add-cart-btn:hover {
@@ -161,17 +151,4 @@
     .menu-grid {
         grid-template-columns: 1fr;
     }
-}
-
-.menu-category-section {
-    margin-bottom: 48px;
-}
-
-.menu-category-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e2e8f0;
 }
