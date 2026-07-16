@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-logo">CampusBite</a>
@@ -20,11 +19,10 @@
                 <a href="cart.html">Cart</a>
                 <a href="orders.html">My Orders</a>
             </nav>
-            <a href="login.php" class="navbar-btn">Login</a>
+            <div id="navbar-auth"></div>
         </div>
     </header>
 
-    <!-- PAGE HEADER -->
     <section class="page-header">
         <div class="section-container">
             <h1 class="page-title">Your Cart</h1>
@@ -32,108 +30,36 @@
         </div>
     </section>
 
-    <!-- CART CONTENT -->
     <section class="cart-page">
         <div class="section-container cart-layout">
-
-            <!-- CART ITEMS LIST -->
             <div class="cart-items" id="cart-items">
-
-                <div class="cart-item">
-                    <img src="images/placeholder-food.jpg" alt="Chicken Biryani">
-                    <div class="cart-item-info">
-                        <h3>Chicken Biryani</h3>
-                        <p class="cart-item-price">৳120</p>
-                    </div>
-                    <div class="cart-item-qty">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-value">2</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                    <div class="cart-item-subtotal">৳240</div>
-                    <button class="remove-btn" title="Remove item">✕</button>
-                </div>
-
-                <div class="cart-item">
-                    <img src="images/placeholder-food.jpg" alt="Chicken Samosa">
-                    <div class="cart-item-info">
-                        <h3>Chicken Samosa</h3>
-                        <p class="cart-item-price">৳30</p>
-                    </div>
-                    <div class="cart-item-qty">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-value">3</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                    <div class="cart-item-subtotal">৳90</div>
-                    <button class="remove-btn" title="Remove item">✕</button>
-                </div>
-
-                <div class="cart-item">
-                    <img src="images/placeholder-food.jpg" alt="Lemon Juice">
-                    <div class="cart-item-info">
-                        <h3>Lemon Juice</h3>
-                        <p class="cart-item-price">৳40</p>
-                    </div>
-                    <div class="cart-item-qty">
-                        <button class="qty-btn minus">-</button>
-                        <span class="qty-value">1</span>
-                        <button class="qty-btn plus">+</button>
-                    </div>
-                    <div class="cart-item-subtotal">৳40</div>
-                    <button class="remove-btn" title="Remove item">✕</button>
-                </div>
-
+                <p>Loading cart...</p>
             </div>
-
-            <!-- ORDER SUMMARY -->
-            <div class="cart-summary">
+            <div class="cart-summary" id="cart-summary" style="display:none;">
                 <h3>Order Summary</h3>
                 <div class="summary-row">
                     <span>Subtotal</span>
-                    <span>৳370</span>
+                    <span id="cart-subtotal">৳0</span>
                 </div>
                 <div class="summary-row">
                     <span>Service Charge</span>
-                    <span>৳10</span>
+                    <span id="cart-service">৳0</span>
                 </div>
                 <div class="summary-row total-row">
                     <span>Total</span>
-                    <span>৳380</span>
+                    <span id="cart-total">৳0</span>
                 </div>
                 <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
             </div>
-
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3 class="footer-logo">CampusBite</h3>
-                <p class="footer-tagline">Canteen ordering made simple for SMUCT students.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="orders.html">My Orders</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p>SMUCT Campus, Uttara, Dhaka</p>
-                <p>canteen@smuct.ac.bd</p>
-            </div>
-        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 CampusBite. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>

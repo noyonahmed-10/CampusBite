@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/admin-style.css">
     <link rel="stylesheet" href="css/admin-categories.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="admin-layout">
-
-        <!-- SIDEBAR -->
         <aside class="admin-sidebar">
             <div class="admin-logo">CampusBite <span>Admin</span></div>
             <nav class="admin-nav">
@@ -21,76 +20,49 @@
                 <a href="admin_categories.html" class="admin-nav-link active">Categories</a>
                 <a href="admin_orders.html" class="admin-nav-link">Orders</a>
             </nav>
-            <a href="login.php" class="admin-logout">Log Out</a>
+            <a href="#" id="admin-logout" class="admin-logout">Log Out</a>
         </aside>
 
-        <!-- MAIN CONTENT -->
         <div class="admin-main">
-
-            <!-- TOPBAR -->
             <header class="admin-topbar">
                 <h1>Categories</h1>
                 <div class="admin-user">Hello, Canteen Staff</div>
             </header>
 
-            <!-- CONTENT -->
             <main class="admin-content">
-
                 <div class="admin-panel">
                     <div class="panel-header">
                         <h2>All Categories</h2>
-                        <button class="add-item-btn">+ Add New Category</button>
+                        <button class="add-item-btn" id="add-category-btn">+ Add New Category</button>
                     </div>
-
                     <table class="admin-table">
                         <thead>
-                            <tr>
-                                <th>Category Name</th>
-                                <th>Items in Category</th>
-                                <th>Actions</th>
-                            </tr>
+                            <tr><th>Category Name</th><th>Items in Category</th><th>Actions</th></tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Rice Items</td>
-                                <td>3</td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Snacks</td>
-                                <td>2</td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Drinks</td>
-                                <td>2</td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Desserts</td>
-                                <td>1</td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
+                        <tbody id="categories-tbody">
+                            <tr><td colspan="3">Loading...</td></tr>
                         </tbody>
                     </table>
                 </div>
-
             </main>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <div class="modal-overlay" id="category-modal" style="display:none;">
+        <div class="modal-box">
+            <h3 id="category-modal-title">Add New Category</h3>
+            <form id="category-form">
+                <input type="hidden" id="category-id" name="id">
+                <label>Category Name</label>
+                <input type="text" id="category-name" name="name" required>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" id="category-cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/main.js"></script>
 </body>
 </html>

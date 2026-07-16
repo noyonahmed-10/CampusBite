@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | CampusBite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<section class="auth-page">
+    <div class="auth-box">
+        <h2 class="auth-title">Create Your Account</h2>
+        <p class="auth-subtitle">Register to continue</p>
+
+        <div class="error" id="register-error" style="display:none;"></div>
+
+        <form id="register-form" class="auth-form">
+            <label>Full Name</label>
+            <input type="text" name="full_name" required>
+
+            <label>Student ID</label>
+            <input type="text" name="student_id" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" required>
+
+            <button type="submit" class="auth-btn">Register</button>
+        </form>
+
+        <p class="auth-switch">
+            Already have an account?
+            <a href="login.html">Login Here</a>
+        </p>
+    </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

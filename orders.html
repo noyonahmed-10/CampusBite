@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <header class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-logo">CampusBite</a>
@@ -20,11 +19,10 @@
                 <a href="cart.html">Cart</a>
                 <a href="orders.html">My Orders</a>
             </nav>
-            <a href="login.html" class="navbar-btn">Login</a>
+            <div id="navbar-auth"></div>
         </div>
     </header>
 
-    <!-- PAGE HEADER -->
     <section class="page-header">
         <div class="section-container">
             <h1 class="page-title">My Orders</h1>
@@ -32,106 +30,18 @@
         </div>
     </section>
 
-    <!-- ORDERS LIST -->
-    <section class="orders-page">
+    <section class="orders-page" id="orders-page">
         <div class="section-container">
-
-            <div class="order-card">
-                <div class="order-card-header">
-                    <div>
-                        <h3>Order #CB1042</h3>
-                        <p class="order-date">Today, 12:45 PM</p>
-                    </div>
-                    <span class="order-status preparing">Preparing</span>
-                </div>
-                <div class="order-items">
-                    <p>Chicken Biryani x2, Chicken Samosa x3, Lemon Juice x1</p>
-                </div>
-                <div class="order-card-footer">
-                    <span class="order-total">Total: ৳380</span>
-                    <div class="order-progress">
-                        <div class="progress-step done">Placed</div>
-                        <div class="progress-step done">Confirmed</div>
-                        <div class="progress-step active">Preparing</div>
-                        <div class="progress-step">Ready</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="order-card">
-                <div class="order-card-header">
-                    <div>
-                        <h3>Order #CB1039</h3>
-                        <p class="order-date">Today, 10:15 AM</p>
-                    </div>
-                    <span class="order-status ready">Ready for Pickup</span>
-                </div>
-                <div class="order-items">
-                    <p>Beef Tehari x1, Borhani x1</p>
-                </div>
-                <div class="order-card-footer">
-                    <span class="order-total">Total: ৳185</span>
-                    <div class="order-progress">
-                        <div class="progress-step done">Placed</div>
-                        <div class="progress-step done">Confirmed</div>
-                        <div class="progress-step done">Preparing</div>
-                        <div class="progress-step active">Ready</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="order-card completed">
-                <div class="order-card-header">
-                    <div>
-                        <h3>Order #CB1021</h3>
-                        <p class="order-date">Yesterday, 1:30 PM</p>
-                    </div>
-                    <span class="order-status completed">Completed</span>
-                </div>
-                <div class="order-items">
-                    <p>Vegetable Khichuri x1, Roshogolla x2</p>
-                </div>
-                <div class="order-card-footer">
-                    <span class="order-total">Total: ৳190</span>
-                    <div class="order-progress">
-                        <div class="progress-step done">Placed</div>
-                        <div class="progress-step done">Confirmed</div>
-                        <div class="progress-step done">Preparing</div>
-                        <div class="progress-step done">Picked Up</div>
-                    </div>
-                </div>
-            </div>
-
+            <p>Loading orders...</p>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3 class="footer-logo">CampusBite</h3>
-                <p class="footer-tagline">Canteen ordering made simple for SMUCT students.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="orders.html">My Orders</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p>SMUCT Campus, Uttara, Dhaka</p>
-                <p>canteen@smuct.ac.bd</p>
-            </div>
-        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 CampusBite. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>

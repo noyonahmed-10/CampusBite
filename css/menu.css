@@ -162,3 +162,16 @@
         grid-template-columns: 1fr;
     }
 }
+
+.menu-category-section {
+    margin-bottom: 48px;
+}
+
+.menu-category-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+}

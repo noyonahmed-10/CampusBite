@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CampusBite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="auth-page">
+    <div class="auth-box">
+        <h1 class="auth-title">CampusBite Login</h1>
+        <p class="auth-subtitle">Login using your Email or Student ID</p>
+
+        <div class="success" id="registered-msg" style="display:none;">
+            Registration Successful. Please Login.
+        </div>
+
+        <div class="error" id="login-error" style="display:none;"></div>
+
+        <form class="auth-form" id="login-form">
+            <label>Email or Student ID</label>
+            <input type="text" name="login" placeholder="Enter Email or Student ID" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <button type="submit" class="auth-btn">Login</button>
+        </form>
+
+        <div class="auth-switch">
+            Don't have an account?
+            <a href="register.html">Register Here</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

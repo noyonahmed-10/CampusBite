@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/admin-style.css">
     <link rel="stylesheet" href="css/admin-orders.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="admin-layout">
-
-        <!-- SIDEBAR -->
         <aside class="admin-sidebar">
             <div class="admin-logo">CampusBite <span>Admin</span></div>
             <nav class="admin-nav">
@@ -21,21 +20,16 @@
                 <a href="admin_categories.html" class="admin-nav-link">Categories</a>
                 <a href="admin_orders.html" class="admin-nav-link active">Orders</a>
             </nav>
-            <a href="login.php" class="admin-logout">Log Out</a>
+            <a href="#" id="admin-logout" class="admin-logout">Log Out</a>
         </aside>
 
-        <!-- MAIN CONTENT -->
         <div class="admin-main">
-
-            <!-- TOPBAR -->
             <header class="admin-topbar">
                 <h1>Orders</h1>
                 <div class="admin-user">Hello, Canteen Staff</div>
             </header>
 
-            <!-- CONTENT -->
             <main class="admin-content">
-
                 <div class="admin-panel">
                     <div class="panel-header">
                         <h2>All Orders</h2>
@@ -47,87 +41,19 @@
                             <button class="filter-btn">Completed</button>
                         </div>
                     </div>
-
                     <table class="admin-table">
                         <thead>
-                            <tr>
-                                <th>Order ID</th>
-                                <th>Student</th>
-                                <th>Items</th>
-                                <th>Total</th>
-                                <th>Status</th>
-                                <th>Update Status</th>
-                            </tr>
+                            <tr><th>Order ID</th><th>Student</th><th>Items</th><th>Total</th><th>Status</th><th>Update Status</th></tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>#CB1042</td>
-                                <td>Rafiul Islam</td>
-                                <td>Chicken Biryani x2, Samosa x3</td>
-                                <td>৳380</td>
-                                <td><span class="status-badge preparing">Preparing</span></td>
-                                <td>
-                                    <select class="status-select">
-                                        <option>Pending</option>
-                                        <option selected>Preparing</option>
-                                        <option>Ready</option>
-                                        <option>Completed</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#CB1041</td>
-                                <td>Tasnim Ahmed</td>
-                                <td>Beef Tehari x1</td>
-                                <td>৳150</td>
-                                <td><span class="status-badge pending">Pending</span></td>
-                                <td>
-                                    <select class="status-select">
-                                        <option selected>Pending</option>
-                                        <option>Preparing</option>
-                                        <option>Ready</option>
-                                        <option>Completed</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#CB1040</td>
-                                <td>Nusrat Jahan</td>
-                                <td>Lemon Juice x2, Roshogolla x1</td>
-                                <td>৳130</td>
-                                <td><span class="status-badge ready">Ready</span></td>
-                                <td>
-                                    <select class="status-select">
-                                        <option>Pending</option>
-                                        <option>Preparing</option>
-                                        <option selected>Ready</option>
-                                        <option>Completed</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#CB1039</td>
-                                <td>Shakil Ahmed</td>
-                                <td>Vegetable Khichuri x1</td>
-                                <td>৳80</td>
-                                <td><span class="status-badge completed">Completed</span></td>
-                                <td>
-                                    <select class="status-select">
-                                        <option>Pending</option>
-                                        <option>Preparing</option>
-                                        <option>Ready</option>
-                                        <option selected>Completed</option>
-                                    </select>
-                                </td>
-                            </tr>
+                        <tbody id="orders-tbody">
+                            <tr><td colspan="6">Loading...</td></tr>
                         </tbody>
                     </table>
                 </div>
-
             </main>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>

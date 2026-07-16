@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/admin-style.css">
     <link rel="stylesheet" href="css/admin-items.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="admin-layout">
-
-        <!-- SIDEBAR -->
         <aside class="admin-sidebar">
             <div class="admin-logo">CampusBite <span>Admin</span></div>
             <nav class="admin-nav">
@@ -21,113 +20,61 @@
                 <a href="admin_categories.html" class="admin-nav-link">Categories</a>
                 <a href="admin_orders.html" class="admin-nav-link">Orders</a>
             </nav>
-            <a href="login.php" class="admin-logout">Log Out</a>
+            <a href="#" id="admin-logout" class="admin-logout">Log Out</a>
         </aside>
 
-        <!-- MAIN CONTENT -->
         <div class="admin-main">
-
-            <!-- TOPBAR -->
             <header class="admin-topbar">
                 <h1>Menu Items</h1>
                 <div class="admin-user">Hello, Canteen Staff</div>
             </header>
 
-            <!-- CONTENT -->
             <main class="admin-content">
-
                 <div class="admin-panel">
                     <div class="panel-header">
                         <h2>All Menu Items</h2>
-                        <button class="add-item-btn">+ Add New Item</button>
+                        <button class="add-item-btn" id="add-item-btn">+ Add New Item</button>
                     </div>
-
                     <table class="admin-table">
                         <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Category</th>
-                                <th>Price</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
+                            <tr><th>Image</th><th>Name</th><th>Category</th><th>Price</th><th>Status</th><th>Actions</th></tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="images/placeholder-food.jpg" alt="Chicken Biryani" class="item-thumb"></td>
-                                <td>Chicken Biryani</td>
-                                <td>Rice Items</td>
-                                <td>৳120</td>
-                                <td><span class="status-badge completed">Available</span></td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/placeholder-food.jpg" alt="Beef Tehari" class="item-thumb"></td>
-                                <td>Beef Tehari</td>
-                                <td>Rice Items</td>
-                                <td>৳150</td>
-                                <td><span class="status-badge completed">Available</span></td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/placeholder-food.jpg" alt="Vegetable Khichuri" class="item-thumb"></td>
-                                <td>Vegetable Khichuri</td>
-                                <td>Rice Items</td>
-                                <td>৳80</td>
-                                <td><span class="status-badge pending">Sold Out</span></td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/placeholder-food.jpg" alt="Chicken Samosa" class="item-thumb"></td>
-                                <td>Chicken Samosa</td>
-                                <td>Snacks</td>
-                                <td>৳30</td>
-                                <td><span class="status-badge completed">Available</span></td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/placeholder-food.jpg" alt="Borhani" class="item-thumb"></td>
-                                <td>Borhani</td>
-                                <td>Drinks</td>
-                                <td>৳35</td>
-                                <td><span class="status-badge pending">Sold Out</span></td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="images/placeholder-food.jpg" alt="Roshogolla" class="item-thumb"></td>
-                                <td>Roshogolla</td>
-                                <td>Desserts</td>
-                                <td>৳50</td>
-                                <td><span class="status-badge completed">Available</span></td>
-                                <td>
-                                    <button class="action-btn edit-btn">Edit</button>
-                                    <button class="action-btn delete-btn">Delete</button>
-                                </td>
-                            </tr>
+                        <tbody id="items-tbody">
+                            <tr><td colspan="6">Loading...</td></tr>
                         </tbody>
                     </table>
                 </div>
-
             </main>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <div class="modal-overlay" id="item-modal" style="display:none;">
+        <div class="modal-box">
+            <h3 id="item-modal-title">Add New Item</h3>
+            <form id="item-form">
+                <input type="hidden" id="item-id" name="id">
+                <label>Name</label>
+                <input type="text" id="item-name" name="name" required>
+                <label>Description</label>
+                <textarea id="item-description" name="description"></textarea>
+                <label>Price (৳)</label>
+                <input type="number" step="0.01" id="item-price" name="price" required>
+                <label>Category</label>
+                <select id="item-category" name="category_id" required></select>
+                <label>Image filename (in /images)</label>
+                <input type="text" id="item-image" name="image" placeholder="placeholder-food.jpg">
+                <label>
+                    <input type="checkbox" id="item-available" name="is_available" checked>
+                    Available
+                </label>
+                <div class="modal-actions">
+                    <button type="button" class="cancel-btn" id="item-cancel-btn">Cancel</button>
+                    <button type="submit" class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/main.js"></script>
 </body>
 </html>
